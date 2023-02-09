@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data validation</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <section>
+            <label for="name">What is your name?</label>
+            <input required type="text" id="name" name="name" minlength="3" aria-describedby="name-minlength" 
+                pattern="[a-z]{3-20}"
+            />
+            <div id="name-minlength">Your name has to bigger than 3 chars :P</div>
+        </section>
+        <section>
+            <label for="email">What is your e-mail?</label>
+            <input required type="text" id="email" name="email" autocomplete="email">
+        </section>
+        <section>
+            <label for="animal">What is your favorite animal?</label>
+            <input type="text" id="animal" name="animal"/>
+            <button>Submit</button>
+        </section>
+        <section>
+            <label for="color">What is your favorite color?</label>
+            <select id="color" name="color">
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+            </select>
+        </section>
+        <section>
+            <fieldset>
+                <legend>What is your favorite web technology?</legend>
+
+                <label for="html">HTML</label>
+                <input type="radio" id="html" name="fwebtech" value="html" />
+
+                <label for="css">CSS</label>
+                <input type="radio" id="css" name="fwebtech" value="css" />
+            </fieldset>
+        </section>
+        <section>
+            <input type="submit" value="submit" />
+            <button type="button">Not submit</button>
+            <button>Submit</button>
+        </section>
+    </form>
+</body>
+</html>
